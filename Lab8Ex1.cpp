@@ -8,16 +8,12 @@ private:
   int total_marks=0;
 
 public:
-  Record();
-  void array_firstcol(){
+  Record(){
     for(int i=0;i<11;i++){
-      record[i][0]=i;
-  }
-  void array_firstrow(){
-    for(int i=0;i<4;i++){
+      record[i][0]=i;}
+    for(int j=0;j<4;j++){
       record[0][i]=i+1;
     }
-  }
   }
   void input_grades(){
     for(int i=0;i<10;i++){
@@ -32,10 +28,17 @@ public:
         total_marks+=record[i][j];
       }
   }
-  int average(int record[][],int total_marks,int average){
-    return
+  int average(int record[][]){
+    int i;
+    return ((record[i][1]+record[i][2]+record[i][3])/3)
+  }
+
+  int class_average(int total_marks,int average)
+  {
+    return class_average=total_marks/30;
   }
 };
+
 int main(int argc, char const *argv[]) {
 
   return 0;
